@@ -1,10 +1,11 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require("webpack");
+const path = require('path');
 
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'bundle.js'
+        filename: '[name].js',
+        path: path.join(__dirname, 'review_build')
     },
     module: {
       rules: [
