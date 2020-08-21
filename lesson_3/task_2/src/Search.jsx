@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class SearchField extends Component {
+class Search extends Component {
   render() {
     return (
       <div className="search">
@@ -13,3 +13,5 @@ export class SearchField extends Component {
     );
   }
 };
+
+export default Search;
