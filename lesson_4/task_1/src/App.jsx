@@ -1,12 +1,12 @@
 import React from 'react';
-import Counter from './Counter';
+import Clock from './Clock';
 
 const App = () => {
     return (
         <>
-        <Counter start={17} interval={5000}/>
-        <Counter start={20} interval={2000}/>
-        <Counter start={30} interval={1000}/>
+        <Clock start={17} interval={5000}/>
+        <Clock start={20} interval={2000}/>
+        <Clock start={30} interval={1000}/>
         </>
     );
 };
