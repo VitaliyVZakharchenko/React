@@ -22,17 +22,17 @@ class ColorPicker extends React.Component {
         <div>
           <button
             className="picker__button picker__button_coral"
-            onPointerEnter={() => this.pickColor("coral")}
+            onPointerEnter={() => this.pickColor("Coral")}
             onPointerLeave={() => this.pickColor("")}
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            onPointerEnter={() => this.pickColor("aqua")}
+            onPointerEnter={() => this.pickColor("Aqua")}
             onPointerLeave={() => this.pickColor("")}
           ></button>
           <button
             className="picker__button picker__button_bisque"
-            onPointerEnter={() => this.pickColor("bisque")}
+            onPointerEnter={() => this.pickColor("Bisque")}
             onPointerLeave={() => this.pickColor("")}
           ></button>
         </div>
