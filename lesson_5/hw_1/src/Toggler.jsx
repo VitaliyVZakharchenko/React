@@ -5,14 +5,14 @@ class Toggler extends React.Component {
     super(props);
 
     this.state = {
-      statusButton: "OFF",
+      statusButton: "Off",
     };
   }
 
   changeStatusButton = () => {
     this.setState(() => {
       return {
-        statusButton: this.state.statusButton === "OFF" ? "ON" : "OFF",
+        statusButton: this.state.statusButton === "Off" ? "On" : "Off",
       };
     });
   };
