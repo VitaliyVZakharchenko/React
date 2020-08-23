@@ -22,18 +22,18 @@ class ColorPicker extends React.Component {
         <div>
           <button
             className="picker__button picker__button_coral"
-            onPointerEnter={() => this.pickColor("Coral")}
-            onPointerLeave={() => this.pickColor("")}
+            onMouseEnter={() => this.pickColor("Coral")}
+            onMouseLeave={() => this.pickColor("")}
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            onPointerEnter={() => this.pickColor("Aqua")}
-            onPointerLeave={() => this.pickColor("")}
+            onMouseEnter={() => this.pickColor("Aqua")}
+            onMouseLeave={() => this.pickColor("")}
           ></button>
           <button
             className="picker__button picker__button_bisque"
-            onPointerEnter={() => this.pickColor("Bisque")}
-            onPointerLeave={() => this.pickColor("")}
+            onMouseEnter={() => this.pickColor("Bisque")}
+            onMouseLeave={() => this.pickColor("")}
           ></button>
         </div>
       </div>
