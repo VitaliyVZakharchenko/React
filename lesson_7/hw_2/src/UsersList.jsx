@@ -5,7 +5,7 @@ import Pagination from "./Pagination";
 class UsersList extends Component {
   state = {
     currentPage: 0,
-    itemsPerPage: 4,
+    itemsPerPage: 3,
   };
 
   goNext = () => {
