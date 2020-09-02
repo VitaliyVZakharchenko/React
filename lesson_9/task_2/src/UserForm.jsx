@@ -3,11 +3,10 @@ import React, { Component } from "react";
 class UserForm extends Component {
   state = {
     name: "",
-    student: "",
+    student: false,
     occupation: "",
     about: "",
   };
-
   handleChange = (event) => {
     const { name, value, checked, type } = event.target;
 
@@ -20,10 +19,7 @@ class UserForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // this.props.onSubmit;
-    // this.props.onSubmit(this.state);
-
-    // console.log(this.state);
+    this.props.onSubmit(this.state);
   };
 
   render() {
@@ -36,11 +32,11 @@ class UserForm extends Component {
           </label>
           <input
             className="form-input"
+            onChange={this.handleChange}
             value={this.state.name}
             type="text"
             id="name"
             name="name"
-            onChange={this.handleChange}
           />
         </div>
         <div className="form-control">
@@ -50,10 +46,10 @@ class UserForm extends Component {
           <input
             className="form-input"
             value={this.state.student}
+            onChange={this.handleChange}
             type="checkbox"
             id="student"
             name="student"
-            onChange={this.handleChange}
           />
         </div>
         <div className="form-control">
@@ -61,9 +57,9 @@ class UserForm extends Component {
             Occupation
           </label>
           <select
+            name="occupation"
             value={this.state.occupation}
             onChange={this.handleChange}
-            name="occupation"
             className="form-input"
           >
             <option value="london">London</option>
@@ -71,6 +67,7 @@ class UserForm extends Component {
             <option value="sidney">Sidney</option>
             <option value="berlin">Berlin</option>
           </select>
+          <div />
         </div>
         <div className="form-control">
           <label className="form-label" id="about" htmlFor="about">
@@ -79,9 +76,9 @@ class UserForm extends Component {
           <textarea
             name="about"
             value={this.state.about}
-            className="form-input"
             onChange={this.handleChange}
-          />
+            className="form-input"
+          ></textarea>
         </div>
         <button className="submit-button" type="submit">
           Submit
