@@ -21,9 +21,9 @@ class TasksList extends Component {
   }
 
   fetchTasks = () => {
-    fetchTasksList().then((tasks) =>
+    fetchTasksList().then((tasksList) =>
       this.setState({
-        tasks
+        tasks: tasksList,
       })
     );
   };
