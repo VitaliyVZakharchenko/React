@@ -21,9 +21,9 @@ class TasksList extends Component {
   }
 
   fetchTasks = () => {
-    fetchTasksList().then((tasksList) =>
+    fetchTasksList().then((tasks) =>
       this.setState({
-        tasks: tasksList,
+        tasks
       })
     );
   };
@@ -87,13 +87,13 @@ class TasksList extends Component {
     // 3. Update task on server
     // 4. Fetch updated tasks list
     const { done, text } = this.state.tasks.find((task) => task.id === id);
-    const updtdTask = {
+    const updatefTask = {
       text,
       done: !done,
     };
 
     // updatedTask
-    updatedTask(id, updtdTask).then(() => this.fetchTasks());
+    updatedTask(id, updatefTask).then(() => this.fetchTasks());
 
     // fetch(`${baseUrl}/${id}`, {
     //   method: "PUT",
