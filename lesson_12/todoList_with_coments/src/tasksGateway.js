@@ -1,3 +1,6 @@
+// const baseUrl =
+//   "https://crudcrud.com/api/942d7dabc6584fbbb424ba7701802dcc/tasks";
+
 const baseUrl = "https://5f56d6c332f56200168bd98b.mockapi.io/api/v1/tasks";
 
 export const createTask = (taskData) =>
@@ -15,6 +18,7 @@ export const createTask = (taskData) =>
 
 export const fetchTasksList = () =>
   fetch(baseUrl)
+    // .then((responce) => responce.json());
     .then((response) => {
       if (response.ok) {
         return response.json();
@@ -27,7 +31,7 @@ export const fetchTasksList = () =>
       }))
     );
 
-export const updateTask = (taskId, taskData) =>
+export const updateTask = (taskId, taskData) => 
   fetch(`${baseUrl}/${taskId}`, {
     method: "PUT",
     headers: {
@@ -39,6 +43,7 @@ export const updateTask = (taskId, taskData) =>
       throw new Error("Failed to update task");
     }
   });
+// };
 
 export const deleteTask = (taskId) =>
   fetch(`${baseUrl}/${taskId}`, {
@@ -48,3 +53,4 @@ export const deleteTask = (taskId) =>
       throw new Error("Failed to delete task");
     }
   });
+// };
