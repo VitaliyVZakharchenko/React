@@ -4,7 +4,7 @@ import CreateTaskInput from "./CreateTaskInput";
 import {
   createTask,
   fetchTasksList,
-  updatedTask,
+  updateTask,
   deleteTask,
 } from "./tasksGateway.js";
 
@@ -87,13 +87,13 @@ class TasksList extends Component {
     // 3. Update task on server
     // 4. Fetch updated tasks list
     const { done, text } = this.state.tasks.find((task) => task.id === id);
-    const updatefTask = {
+    const updatedTask = {
       text,
       done: !done,
     };
 
     // updatedTask
-    updatedTask(id, updatefTask).then(() => this.fetchTasks());
+    updateTask(id, updatedTask).then(() => this.fetchTasks());
 
     // fetch(`${baseUrl}/${id}`, {
     //   method: "PUT",

@@ -31,7 +31,7 @@ export const fetchTasksList = () =>
       }))
     );
 
-export const updatedTask = (taskId, taskData) => 
+export const updateTask = (taskId, taskData) => 
   fetch(`${baseUrl}/${taskId}`, {
     method: "PUT",
     headers: {
